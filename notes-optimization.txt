@@ -1,9 +1,0 @@
-Optimization:
-
-If there are multiple plugin instances:
-	- XHR requests :
-		- if there are multiple URLs, we could use Promise.all
-		- in my case, i stored category in variable, i could store different sports in different categories and use one call
-	- Carousel initialization
-		- i would wait with initializaion, unless there is some correct response data.
-		- if we have one carousel for each sport, i would wait for data for correct sport and then initialized carousel.
