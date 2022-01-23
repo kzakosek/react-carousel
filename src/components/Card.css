@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@media(max-width: 320px){ 
+    .container{
+       display: none;
+       min-width: none;
+       max-width: none;
+    }
+}
+
+@media(min-width: 320px) and (max-width: 450px){ 
+    #details{
+        transform: scale(.8);
+        display: block;
+        text-align: center;
+        min-width: none;
+        max-width: none;
+    }
+}
+
+@media(min-width: 450px) and (max-width: 870px){ 
+   #details{
+        display: block;
+        text-align: center;
+        min-width: none;
+        max-width: none;
+   }
+}
+
+@media(min-width: 870px){ 
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+  
+.container {
+    min-height: 400px !important;
+    max-width: 50% !important;
+    background-size: 100% 100% !important;
+    border-radius: 15px;
+    margin-top: 200px;
+}
+  
+ 
+.match_title{
+    margin-top: 5px;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.match_location{
+    font-size: 150%;
+    text-align: center;
+}
+
+#details{
+    margin-top: 20px;
+}
+
+.team_name{
+    font-size: 150%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.team_logo{
+    width: 180px;
+    height: 180px;
+    text-align: center;
+}
+
+.score{
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#info{
+    margin-top: 20px;
+}
+
+.halftime{
+    border:2px; 
+    border-style:solid; 
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+h1, h2, h3, p{
+    color: white;
+    white-space: pre-wrap;
+}
