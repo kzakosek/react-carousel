@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-carousel/static/css/main.65ff228d.css",
-    "main.js": "/react-carousel/static/js/main.82ac8691.js",
+    "main.css": "/react-carousel/static/css/main.8ff3ca2f.css",
+    "main.js": "/react-carousel/static/js/main.2026d4e4.js",
     "static/media/bg-live.jpg": "/react-carousel/static/media/bg-live.5d0a1f36f111a1677fdf.jpg",
     "static/media/bg-postmatch.jpg": "/react-carousel/static/media/bg-postmatch.e63fbbacee9780ad2b02.jpg",
     "static/media/bg-prematch.jpg": "/react-carousel/static/media/bg-prematch.5e7ec9df534a894bbcca.jpg",
     "index.html": "/react-carousel/index.html",
-    "main.65ff228d.css.map": "/react-carousel/static/css/main.65ff228d.css.map",
-    "main.82ac8691.js.map": "/react-carousel/static/js/main.82ac8691.js.map"
+    "main.8ff3ca2f.css.map": "/react-carousel/static/css/main.8ff3ca2f.css.map",
+    "main.2026d4e4.js.map": "/react-carousel/static/js/main.2026d4e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.65ff228d.css",
-    "static/js/main.82ac8691.js"
+    "static/css/main.8ff3ca2f.css",
+    "static/js/main.2026d4e4.js"
   ]
 }
