@@ -33,7 +33,6 @@ export default function MatchCarousel(){
           });
     }, [])    
    
- console.log(responseData);
     if(responseData.length > 0){
         for(var i = 0; i < responseData.length; i++){
             var sportCategories = null;
@@ -63,10 +62,10 @@ export default function MatchCarousel(){
                                     teamAwayName: allMatches[match].teams.away.name,
                                     teamHomeShortName: allMatches[match].teams.home.abbr,
                                     teamAwayShortName: allMatches[match].teams.away.abbr,
-                                    teamHomeImage: "http://ls.betradar.com/ls/crest/big/"+allMatches[match].teams.home.uid+".png",
-                                    teamAwayImage: "http://ls.betradar.com/ls/crest/big/"+allMatches[match].teams.away.uid+".png",
-                                    resultHome: allMatches[match].result.home,
-                                    resultAway: allMatches[match].result.away,   
+                                    teamHomeImage: "https://img.sportradar.com/ls/crest/big/"+allMatches[match].teams.home.uid+".png",
+                                    teamAwayImage: "https://img.sportradar.com/ls/crest/big/"+allMatches[match].teams.away.uid+".png",
+                                    resultHome: allMatches[match].result.home?allMatches[match].result.home:"0",
+                                    resultAway: allMatches[match].result.away?allMatches[match].result.away:"0",   
                                     matchDate: allMatches[match]._dt.date,
                                     matchTime: allMatches[match]._dt.date 
                                 });
@@ -83,19 +82,19 @@ export default function MatchCarousel(){
             cards.push(
             <Card key={card} backgroundImage={imageStart} title = {list[card].tournamentTile} size="3vh" gameName={list[card].categoryName} 
             matchInfo={list[card].matchStatusName} home={list[card].teamHomeName} away={list[card].teamAwayName} score={"VS\n" + list[card].matchTime+"\n"+list[card].matchDate} 
-            homeTeamImage={germanyFlag} awayTeamImage={italyFlag} matchInfoColor={"#474747"}/>
+            homeTeamImage={list[card].teamHomeImage} awayTeamImage={list[card].teamAwayImage} matchInfoColor={"#474747"}/>
             );
         }else if(list[card].matchStatus == 100){
             cards.push(
             <Card key={card} backgroundImage={imageEnd} title = {list[card].tournamentTile} size="6vh" gameName={list[card].categoryName} 
             matchInfo={list[card].matchStatusName} home={list[card].teamHomeName} away={list[card].teamAwayName} score={list[card].resultHome+":"+list[card].resultAway} 
-            homeTeamImage={germanyFlag} awayTeamImage={italyFlag} matchInfoColor={"#05832f"}/>,
+            homeTeamImage={list[card].teamHomeImage} awayTeamImage={list[card].teamAwayImage} matchInfoColor={"#05832f"}/>,
             );
         }else{
             cards.push(
             <Card key={card} backgroundImage={imageLive} title = {list[card].tournamentTile} size="6vh" gameName={list[card].categoryName} 
             matchInfo={list[card].matchStatusName} home={list[card].teamHomeName} away={list[card].teamAwayName} score={list[card].resultHome+":"+list[card].resultAway} 
-            homeTeamImage={germanyFlag} awayTeamImage={italyFlag} matchInfoColor={"#ff9100"}/>
+            homeTeamImage={list[card].teamHomeImage} awayTeamImage={list[card].teamAwayImage} matchInfoColor={"#ff9100"}/>
             );
         }
     }
@@ -104,16 +103,16 @@ export default function MatchCarousel(){
     return (
         <div className="App">
             {cards.length > 0 && (
-                <Carousel
+                <Carousel 
                     ref={carouselRef}
                     initialActiveIndex={0}
-                    enableAutoPlay={true}
+                    enableAutoPlay={false}
                     autoPlay={true}
                     autoPlaySpeed={3000}
                     onChange={Loop}
                     showArrows={false}
                     showStatus={false}
-                    showThumbs={false}
+                    showThumbs={false} 
                     >
 
                     {cards}

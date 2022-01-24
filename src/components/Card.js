@@ -32,7 +32,7 @@ export default function Card({backgroundImage, title, size, gameName, matchInfo,
                     </div>
                 </div> 
             </div>
-            <div className="row" id="info"> 
+            <div className="row justify-content-center" id="info"> 
                 <div className="col">
                     <div className="text-center">
                         <p><span className="halftime" style={{backgroundColor: matchInfoColor, borderColor: matchInfoColor}}>{matchInfo}</span></p>
