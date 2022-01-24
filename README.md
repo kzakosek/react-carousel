@@ -6,7 +6,7 @@ Match Carousel
 Overview:
 * Obtain information about matches.
 	* Choose sport (sport_id) and maximum no. of matches displayed (max)
-* Informations are obtained API
+* Informations are obtained with Sportradar API
 
 <!-- INSTALLATION -->
 ### Installation
