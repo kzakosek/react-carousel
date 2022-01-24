@@ -106,7 +106,7 @@ export default function MatchCarousel(){
                 <Carousel 
                     ref={carouselRef}
                     initialActiveIndex={0}
-                    enableAutoPlay={false}
+                    enableAutoPlay={true}
                     autoPlay={true}
                     autoPlaySpeed={3000}
                     onChange={Loop}
